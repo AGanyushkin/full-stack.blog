@@ -15,4 +15,8 @@ pelican --listen
 pelican -r -l -t ./theme
 ```
 
-
+```bash
+pelican content -t ./theme
+aws s3 rm --recursive s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/
+aws s3 cp --recursive ./output/ s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/
+```

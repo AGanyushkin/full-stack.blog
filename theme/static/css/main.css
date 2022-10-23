@@ -1,8 +1,19 @@
 @import        url("pygments.css");
 
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('LexendDeca-Regular.eot');
+    src: local('Lexend Deca Regular'), local('LexendDeca-Regular'),
+        url('LexendDeca-Regular.eot?#iefix') format('embedded-opentype'),
+        url('LexendDeca-Regular.woff2') format('woff2'),
+        url('LexendDeca-Regular.woff') format('woff'),
+        url('LexendDeca-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    /*font-family: "Georgia", "FreeSerif", serif;*/
-    font-family: monospace;
+    font-family: "Lexend Deca", sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -16,14 +27,29 @@ body {
     color: blue;
 }
 
-.page-head {
-    padding: 13px 40px;
-    /*background-color: lightgray;*/
+header.page-head {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.page-head h1 a {
+header.page-head h1 a {
+    margin-right: 30px;
+}
+
+header.page-head h1 a {
     text-decoration: none;
     color: black;
+}
+
+header.page-head a.menu-link {
+    text-decoration: none;
+    color: black;
+}
+
+header.page-head a.menu-link:hover {
+    color: blue;
 }
 
 .post .post-header .meta {
@@ -38,8 +64,15 @@ body {
     color: blue;
 }
 
-.post {
-    margin: 30px;
+section.content {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+section.content article.post {
+    padding-bottom: 21px;
 }
 
 .post .post-header time {
@@ -51,11 +84,23 @@ body {
 }
 
 article.post.content {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
 
+article.post.content header.post-header {
+    text-align: center;
+}
+
+article.post.content header.post-header div.meta > * {
+    padding-right: 10px;
 }
 
 article.post.content .post-content {
-    padding: 20px;
+    /* padding: 20px; */
+    padding-top: 50px;
 }
 
 .highlight {
@@ -65,4 +110,24 @@ article.post.content .post-content {
 
 pre code {
     color: white;
+}
+
+div.page {
+    padding-bottom: 130px;
+}
+
+nav#pagination {
+    text-align: center;
+    padding: 30px;
+
+}
+
+nav#pagination > * {
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav#pagination > span.active {
+    color: lightgray;
 }

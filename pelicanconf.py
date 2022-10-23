@@ -1,5 +1,5 @@
 AUTHOR = 'Progg'
-SITENAME = 'full-stack.blog'
+SITENAME = 'Full Stack Blog'
 SITEURL = ''
 
 PATH = 'content'

@@ -17,11 +17,13 @@
             <a href="{{ SITEURL }}/index.html">{{ SITENAME }}</a>
         </h1>
 
-        {% if DISPLAY_PAGES_ON_MENU %}
-            {% for p in PAGES %}
-                <li><a href="{{ SITEURL}}/{{ p.url|e }}"{% if p == page %} class="active"{% endif %}>{{ p.title }}</a></li>
-            {% endfor %}
-        {% endif %}
+        <span style="flex-grow: 1;"></span>
+
+        <a class="menu-link" href="https://github.com/AGanyushkin">github.com/AGanyushkin</a>
+
+        {% for p in PAGES %}
+            <!-- <li><a href="{{ SITEURL}}/{{ p.url|e }}"{% if p == page %} class="active"{% endif %}>{{ p.title }}</a></li> -->
+        {% endfor %}
 
     </header>
 
