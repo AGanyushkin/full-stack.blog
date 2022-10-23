@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block headers %}
+{{ super() }}
+<meta name="author" content="{{ article.author }}"/>
+<meta name="keywords" content="{{ article.tags|join(', ') }}"/>
+{% endblock %}
+
+<!--{% block title %}{{ article.title }} — {{ super() }}{% endblock %}-->
+
+{%- block content %}
+<article class="post content">
+    <header class="post-header">
+        <time datetime="{{ article.date.isoformat() }}" pubdate="pubdate">
+            {{ article.locale_date }}
+        </time>
+        <h1>{{ article.title }}</h1>
+        <div class="meta">
+            category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a> <br />
+            author: <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a> <br />
+            tags: {% for tag in article.tags %} #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %} <br />
+        </div>
+    </header>
+    <div class="post-content">
+        {{ article.content}}
+    </div>
+</article>
+{% endblock content -%}

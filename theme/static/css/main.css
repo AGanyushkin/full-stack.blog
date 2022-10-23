@@ -1,0 +1,68 @@
+@import        url("pygments.css");
+
+body {
+    /*font-family: "Georgia", "FreeSerif", serif;*/
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+
+.index-article-link {
+    text-decoration: none;
+    color: black;
+}
+
+.index-article-link:hover {
+    color: blue;
+}
+
+.page-head {
+    padding: 13px 40px;
+    /*background-color: lightgray;*/
+}
+
+.page-head h1 a {
+    text-decoration: none;
+    color: black;
+}
+
+.post .post-header .meta {
+    color: gray;
+}
+
+.post .post-header .meta a {
+    color: gray;
+}
+
+.post .post-header .meta a:hover {
+    color: blue;
+}
+
+.post {
+    margin: 30px;
+}
+
+.post .post-header time {
+    font-size: 13px;
+}
+
+.post .post-header h1 a {
+
+}
+
+article.post.content {
+
+}
+
+article.post.content .post-content {
+    padding: 20px;
+}
+
+.highlight {
+    padding: 10px;
+    background-color: black;
+}
+
+pre code {
+    color: white;
+}
