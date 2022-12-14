@@ -22,7 +22,7 @@ Each entry has fields like: id, title, doi, etc… I want to create table in dat
 
 # The main concepts of Spring Batch
 
-![](images/Ch02_SpringBatchArchitecture_Architecture_ProcessFlow.png)
+![](images/Ch02_SpringBatchArchitecture_Architecture_ProcessFlow.png){: .image-process-article-image}
 
 **Step** – this is a smallest processed unit in Spring Batch. This element consists of ItemReader, ItemProcessor and ItemWriter which will get, process and store your data. In Spring Batch we can find some set of ItemReader’s and ItemWriter’s – [List of ItemReaders and ItemWriters](https://docs.spring.io/spring-batch/docs/current/reference/html/appendix.html#listOfReadersAndWriters)
 

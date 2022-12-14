@@ -6,7 +6,7 @@ Author: Andrey G
 Status: published
 ---
 
-![](images/multiple_databases-Page-3.drawio.png)
+![](images/multiple_databases-Page-3.drawio.png){: .image-process-article-image}
 
 I would like to design data layer for my project and I have a problem to use different datasources in one application.
 
@@ -18,11 +18,11 @@ All code you can find here: [https://github.com/AGanyushkin/springdatajpa-multip
 
 I will be experiment with access to different datasources like described below:
 
-![What we would like to test](images/multiple_databases-Page-1.drawio.png)
+![What we would like to test](images/multiple_databases-Page-1.drawio.png){: .image-process-article-image}
 
 Out data schema look like this:
 
-![](images/multiple_databases-Page-2.drawio.png)
+![](images/multiple_databases-Page-2.drawio.png){: .image-process-article-image}
 
 Data are located in two different databases PostgreSQL and MySQL. There are tree different tables in free different schemas (public,images,text) inside PostgreSQL database instance.
 

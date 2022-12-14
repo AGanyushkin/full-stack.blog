@@ -1,22 +1,21 @@
 
-https://docs.getpelican.com/en/latest/index.html
+# Build and deploy
 
-https://www.markdownguide.org/basic-syntax/
+```shell
+# Generate content
+make clean html
 
-https://docs.getpelican.com/en/3.6.3/content.html
+# Deploy
+aws.exe s3 rm --recursive s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/ --profile YC
 
-
-
-pelican content
-
-pelican --listen
-
-```bash
-pelican -r -l -t ./theme
+aws.exe s3 cp --recursive ./output/ s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/ --profile YC
 ```
 
-```bash
-pelican content -t ./theme
-aws s3 rm --recursive s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/
-aws s3 cp --recursive ./output/ s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/
-```
+
+# Some additional links
+
+[markdownguide](https://www.markdownguide.org/basic-syntax/)
+
+[pelican docs](https://docs.getpelican.com/en/latest/index.html)
+
+[pelican content](https://docs.getpelican.com/en/3.6.3/content.html)

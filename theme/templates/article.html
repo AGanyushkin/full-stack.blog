@@ -1,36 +1,44 @@
 {% extends "base.html" %}
-
-{% block headers %}
-{{ super() }}
-<meta name="author" content="{{ article.author }}"/>
-<meta name="keywords" content="{{ article.tags|join(', ') }}"/>
+{% block head %}
+<meta name="keywords" content="{{ article.tags|join(', ')  }}">
 {% endblock %}
 
-<!--{% block title %}{{ article.title }} — {{ super() }}{% endblock %}-->
+{% block title %}&ndash; {{ article.title }}{% endblock %}
 
-{%- block content %}
-<article class="post content">
-    
-    <header class="post-header">
-        <!-- <time datetime="{{ article.date.isoformat() }}" pubdate="pubdate">
-            {{ article.locale_date }}
-        </time> -->
-        <h1>{{ article.title }}</h1>
+{% block canonical_rel %}
+  {% if article.canonical_url %}
+    <link rel="canonical" href="{{ article.canonical_url }}">
+  {% else %}
+    <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+  {% endif %}
+{% endblock %}
 
-        <div class="meta">
-            <time datetime="{{ article.date.isoformat() }}" pubdate="pubdate">
-                {{ article.locale_date }}
-            </time>
-            <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-            
-            <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-            {% for tag in article.tags %} #<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% endfor %}
-        </div>
-    </header>
-    
-    <div class="post-content">
-        {{ article.content}}
-    </div>
+{% block content %}
+  <p class="meta">
+    {{ article.date|strftime('%d %B %Y') }}
+    <a href="/">
+      <i class="home fa fa-home"></i>
+    </a>
+  </p>
 
-</article>
-{% endblock content -%}
+  <h1 class="title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
+
+  <div class="article_text" id="post">
+    {{ article.content }}
+  </div>
+
+  <div class="article_meta related">
+    <h3>Category: </h3>
+    <span><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</span>
+
+    {% if article.tags %}
+    <h3>Tags:</h3>
+    <span>
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+      {% endfor %}
+    </span>
+    {% endif %}
+  </div>
+
+{% endblock %}

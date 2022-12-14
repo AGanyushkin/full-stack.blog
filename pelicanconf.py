@@ -1,6 +1,9 @@
-AUTHOR = 'Progg'
+AUTHOR = 'Andrey'
+AUTHOR_FULL = 'Andrey Ganyushkin'
 SITENAME = 'Full Stack Blog'
 SITEURL = ''
+
+TAGLINE = 'I am a software engineer with more than 10 years of experience. I am interested in both the architecture of the application and the development process itself, with full-stack and cloud approaches.'
 
 PATH = 'content'
 
@@ -16,14 +19,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'https://getpelican.com/'),
-         ('Python.org', 'https://www.python.org/'),
-         ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = ()
+# LINKS = (('GitHub', 'https://github.com/AGanyushkin'),
+# )
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('github', 'AGanyushkin'),
+          ('linkedin', 'andrey-ganyushkin-7bb99a89'),
+          ('habr', 'SleepwalkerOne'),)
 
 DEFAULT_PAGINATION = 13
 
@@ -35,4 +38,20 @@ DISPLAY_PAGES_ON_MENU = True
 
 DEFAULT_METADATA = {
     'status': 'draft',
+}
+
+USER_LOGO_URL = '/theme/images/progg_small.jpeg'
+# USER_FAVICON_URL = '/favicon.png'
+
+# https://github.com/pelican-plugins/image-process
+IMAGE_PROCESS = {
+    "thumb": {
+        "type": "image",
+        "ops": ["crop 0 0 50% 50%", "scale_out 150 150 True", "crop 0 0 150 150"],
+    },
+
+    "article-image": {
+        "type": "image",
+        "ops": ["scale_in 500 300 True"],
+    }
 }

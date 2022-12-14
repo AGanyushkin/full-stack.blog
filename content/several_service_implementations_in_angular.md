@@ -6,7 +6,7 @@ Author: Andrey G
 Status: published
 ---
 
-![](images/uml_interface_implementation-1.png)
+![](images/uml_interface_implementation-1.png){: .image-process-article-image}
 
 **The idea**: I would like to have ability to write code like I do this in Java ;). I would like to have ability to create a code with abstract service and provide different implementation for different components.
 
