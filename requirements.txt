@@ -1,0 +1,5 @@
+beautifulsoup4
+pelican-seo
+pelican-sitemap
+pelican-webassets
+pelican-image-process
