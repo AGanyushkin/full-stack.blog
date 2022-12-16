@@ -703,6 +703,19 @@ border-top: dotted #ddd;
 border-width: 1px 0;
 }
 
+#pet-projects {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 13px;
+  padding-top: 15px ;
+  border-top: dotted #ddd;
+  border-width: 1px 0;
+}
+
+#projects p {
+  margin-bottom: 0;
+}
+
 #post pre {
 border: 1px solid #ddd;
 font-size: 85%;

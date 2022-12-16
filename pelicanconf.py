@@ -53,6 +53,11 @@ IMAGE_PROCESS = {
     "article-image": {
         "type": "image",
         "ops": ["scale_in 500 300 True"],
+    },
+
+    "big-article-image": {
+        "type": "image",
+        "ops": ["scale_in 650 600 True"],
     }
 }
 
