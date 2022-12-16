@@ -6,7 +6,7 @@ Author: Andrey G
 Status: published
 ---
 
-![](images/EIP_all_Vorschaubild.png){: .image-process-article-image}
+![enterprise patterns](images/EIP_all_Vorschaubild.png){: .image-process-article-image}
 
 It is simple overview of Spring Integration component from Spring framework and it is impossible to cover all features in one article.
 
@@ -126,7 +126,7 @@ Here we declared endpoint which accepts request on “/plant/{plantId}” url, a
 
 # Messages and Channels
 
-![](images/message.jpg){: .image-process-article-image}
+![Messages and Channels](images/message.jpg){: .image-process-article-image}
 
 `Message` it is core concept in Spring Integration.
 

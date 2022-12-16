@@ -6,7 +6,7 @@ Author: Andrey G
 Status: published
 ---
 
-![](images/demo-angular-multisource.png){: .image-process-article-image}
+![multiple sources in Angular application](images/demo-angular-multisource.png){: .image-process-article-image}
 
 # What I want to do?
 
@@ -170,7 +170,7 @@ As a last step we need to load messages for account from rest endpoint. let’s 
 
 Let’s check the results:
 
-![](images/demo-angular-multisource.png){: .image-process-article-image}
+![results](images/demo-angular-multisource.png){: .image-process-article-image}
 
 There is only messages for “ONLINE” accounts. Blue id color – accounts from “customer” endpoint, orange colors it is admin accounts from different admin rest endpoint.
 

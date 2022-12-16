@@ -772,9 +772,9 @@ margin-bottom: 25px;
 
 #gravatar {
 width: 180px;
--webkit-border-radius: 50%;
--moz-border-radius: 50%;
-border-radius: 50%;
+-webkit-border-radius: 10%;
+-moz-border-radius: 10%;
+border-radius: 10%;
 }
 
 #stalker {
@@ -926,3 +926,7 @@ h2 {
 
 pre { white-space: pre; overflow: auto; }
 code, pre { font-family: Monaco,Menlo,Consolas,"Courier New",monospace; }
+
+.article_meta {
+  padding-top: 50px;
+}

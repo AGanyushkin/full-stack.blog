@@ -1,7 +1,7 @@
 AUTHOR = 'Andrey'
 AUTHOR_FULL = 'Andrey Ganyushkin'
 SITENAME = 'Full Stack Blog'
-SITEURL = ''
+SITEURL = 'https://full-stack.blog'
 
 TAGLINE = 'I am a software engineer with more than 10 years of experience. I am interested in both the architecture of the application and the development process itself, with full-stack and cloud approaches.'
 
@@ -53,5 +53,28 @@ IMAGE_PROCESS = {
     "article-image": {
         "type": "image",
         "ops": ["scale_in 500 300 True"],
+    }
+}
+
+MENUITEMS = (
+    ('Tags', '/tags.html'),
+)
+
+SEO_REPORT = True  # SEO report is enabled by default
+SEO_ENHANCER = True  # SEO enhancer is disabled by default
+SEO_ENHANCER_OPEN_GRAPH = True # Subfeature of SEO enhancer
+SEO_ENHANCER_TWITTER_CARDS = True # Subfeature of SEO enhancer
+
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.5,
+        "indexes": 0.5,
+        "pages": 0.5
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
     }
 }

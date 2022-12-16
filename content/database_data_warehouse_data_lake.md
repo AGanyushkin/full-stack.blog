@@ -20,7 +20,7 @@ Technologies: MySQL, PostgreSQL, etc… Any relation or non relation databases.
 
 # Warehouse
 
-![](images/60dcbc825daf4d570b422319_data-warehousing.png){: .image-process-article-image}
+![Warehouse](images/60dcbc825daf4d570b422319_data-warehousing.png){: .image-process-article-image}
 
 Special tipe of database. Can be organizer in similar technologies as Database layer.
 
@@ -39,7 +39,7 @@ A bit about terms
 
 # Data lake
 
-![](images/698-6989037_data-lake-png-download-centralised-information-and-management.png){: .image-process-article-image}
+![Data lake](images/698-6989037_data-lake-png-download-centralised-information-and-management.png){: .image-process-article-image}
 
 You don’t know what you want, just keep data, maybe you will be able to analyze it in future and get some benefits from it. Nice approach, I like it 🙂
 
