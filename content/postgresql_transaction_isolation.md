@@ -1,104 +1,163 @@
-Title: PostgreSQL transaction isolation
-Date: 2022-08-22 00:01
+Title: PostgreSQL indexes
+Date: 2022-08-25 00:01
 Category: overview
 Tags: PostgreSQL
 Author: Andrey G
 Status: published
 ---
 
-[PostgreSQL basics](/inside-postgresql.html)
+[docs](https://www.postgresql.org/docs/current/indexes-types.html)
 
-[Book to read: PostgreSQL 14 изнутри, Егор Рогов](https://edu.postgrespro.ru/postgresql_internals-14.pdf)
+# Hash
 
-A bit more details about transaction isolation in PostgreSQL database.
+Hash table by index key. Minimum bucket count = 2.
+Only hash value and version are stored in bucket, without key value.
 
-# Transaction isolation anomalies
+This index used 4 times of pages:
+-meta page - index header
+-bucket page - bucket storage
+-overflow page - used if there is no more space in bucket
+-bitmap page - bitmask, which "overflow page" can be reused
 
-Different levels of "Transaction isolation" differ from each other by the presence or absence of anomalies.
+```
+# supported operators
+=
+```
 
-## lost update
+Keys are not stored in hash index - it means this index can't be used without processing data from table.
 
-Two transactions read one row and update this row independently (with original data) and commit one by one.
-As result we can see only result from last commited transaction which was allied to original data.
+# B-tree
 
-## dirty read
+This index is for ordinal data only. Data that can be compared and sorted.
 
-Appears when the transaction (t2) reads uncommitted data from other transaction (t1).
-But there is no guarantee that (t1) will be commited successfully.
+> a B-tree is a self-balancing tree data structure that maintains sorted data and allows searches,
+> sequential access, insertions, and deletions in logarithmic time.
 
-## non-repeatable read
+Key values are stored in index data.
 
-Transaction (t1) can read different data in two different read operations if
-between first and second reads some any changes will be commited from other (t2) transaction.
+```
+# supported operators
+<   <=   =   >=   >
+```
 
-## phantom read
+Deduplication - process which executed to drop key value and replace it with row version id.
+It can reduce size of index data.
 
-Same like "non-repeatable read" but in row lavel.
+> The B-tree generalizes the binary search tree, allowing for nodes with more than two children.
 
-Transaction (t1) can find different set of rows in two different searches if
-between first and second search (read rows, select, find by selectoror or without), insert or delete operations will be commited from other (t2) transaction.
+# GiST and SP-GiST
 
-## read skew
+GiST - Generalized Search Tree. generalized self-balancing search tree
 
-note: `Read Uncommitted` is not possible in postgreSQL.
+This index base on b-tree but _not only_ for sortable data.
 
-Transaction (t1) works and update some fields. Transaction (t2) read the same fields.
-(t2) can read some fields when (t1) is working and get old (not updated) version and read some fields after (t1 commit) and it will be new (updated versions).
-As result (t2) will work with not updated and updated versions. It will cause the inconsistency.
+In GiST we can implement "adapter" for out custom data type class and this type will supported by GiST index.
 
-## write skew
+```
+# supported operators
+<<   &<   &>   >>   <<|   &<|   |&>   |>>   @>   <@   ~=   &&
+```
 
-Two transactions (t1) and (t2) can read one field, make some desition and write results in other fields.
-Each of this result fields can be valid but both results together can broke consistency.
+GiST supports:
+- geometric data
 
-The main cause here it is parallel decision which was based on one original value and complex constraint.
+- range data
 
-## reading transcription only
+- ordinal types
 
-If we have three parallel transactions: (t1 write) (t2 write), (t3 read).
+- network addresses
 
-(t3 read) can get inconsistency data because (t1 write) & (t2 write) in parallel can update this data and for (t1) & (t2) it is ok,
-because they are working with original values and they can be aligned as sequence.
-But for (t3) we can't guarantee which data will be available for this transaction.
+- integer arrays
+
+- label tree
+
+- key-value
+
+- trigrams
+
+SP-GiST - space partitioning generalized Search Tree. This index very similar for GiST.
+The basic idea is to divide the search space into non-overlapping regions, each of which, in turn, can also be
+recursively divided into subdomains.
+
+# GIN
+
+GIN - Generalized Inverted Index.
+
+The main area for GIN index - full text search.
+
+> A GIN index stores a set of (key, posting list) pairs, where a posting list is a set of row
+> IDs in which the key occurs. The same row ID can appear in multiple posting lists,
+> since an item can contain more than one key. Each key value is stored only once,
+> so a GIN index is very compact for cases where the same key appears many times.
+
+GIN also supports:
+
+- intarray
+
+- key-value
+
+- json query language
+
+```
+# supported operators
+@> @? @@
+```
+
+# BRIN
+
+BRIN - Block Range Index
+
+block - page in PostgreSQL, 8kB of data.
+
+this index was designed not to quickly search for the necessary lines,
+but in order to avoid viewing obviously unnecessary ones.
+
+> BRIN is incredibly helpful in efficiently searching over large time-series data and has the
+> benefit of taking up significantly less space on disk than a standard B-TREE index.
+
+> BRIN is designed for handling very large tables in which certain columns have some natural
+> correlation with their physical location within the table.
 
 
-# Snapshot Isolation, SI
+# How to create index
+```sql
+-- To create a unique B-tree index on the column title in the table films
+CREATE UNIQUE INDEX title_idx ON films (title);
+```
 
-Modern approach to organize isolation between transactions without locks.
+# Partial index
+```sql
+CREATE INDEX orders_unbilled_index ON orders (order_nr)
+WHERE billed is not true;
+```
 
-A special version of SI is implemented in PostgreSQL - [MVCC](/inside-postgresql.html) (Multiversion Concurrency Control).
+# Functional indexes or indexes by expression
+```sql
+-- To create an index on the expression lower(title), allowing efficient case-insensitive searches:
+CREATE INDEX ON films ((lower(title)));
+```
 
-In snapshot isolation we can have only two types of anomalies: `write skew` and `reading transcription only`
+# For more than one column
+```sql
+CREATE INDEX idx_people_names
+ON people (last_name, first_name);
+```
 
+# Index by JSONB column
+```sql
+CREATE INDEX animal_index ON farm (((animal ->> 'cow')::int))
+WHERE (animal ->> 'cow') IS NOT NULL;
+```
 
-# Transaction isolation
-
-##  Read Uncommitted
-
-anomalies: `dirty read`, `non-repeatable read`, `phantom read`, other
-
-In this transaction we will read uncommitted data from other transactions.
-
-In PostgreSQL this isolation can be selected but works like `Read Committed`
-
-## Read Committed
-
-anomalies: `non-repeatable read`, `phantom read`, other
-
-In transaction we will read changes from other transactions only if this changes was committed. But it may cause `non-repeatable read`.
-
-## Repeatable Read
-
-anomalies: `phantom read`, other
-
-There is no effects by `non-repeatable read` but `phantom read` still can happens.
-
-## Serializable
-
-This mode should avoid any anomalies. But your application must be ready to retry transactions.
+# INCLUDE index
+the idea - include all required data for search into index but not to create index by all these columns
+```sql
+-- To create a unique B-tree index on the column title with included columns director and rating in the table films:
+CREATE UNIQUE INDEX title_idx ON films (title) INCLUDE (director, rating);
+```
 
 
 <br />
 # Conclusion
 
-We must be careful to use databases... :(
+It is important to have right and useful indexes in the project.
