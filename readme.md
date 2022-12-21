@@ -7,8 +7,8 @@ make clean html
 
 # Deploy
 aws.exe s3 rm --recursive s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/ --profile YC
-
 aws.exe s3 cp --recursive ./output/ s3://full-stack.blog/ --endpoint-url=https://storage.yandexcloud.net/ --profile YC
+
 ```
 
 

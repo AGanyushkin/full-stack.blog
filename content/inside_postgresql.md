@@ -18,6 +18,8 @@ The main idea - read locks don't affects other read or write locks. Two differen
 
 With MVCC we can avoid table or row loks and increase performance.
 
+![PostgreSQL MVCC](/images/mvcc.png){: .image-process-big-article-image}
+
 # Transaction isolation
 
 In PostgreSQL we can use
@@ -43,6 +45,14 @@ Page size in PostgreSQL equals 8 kB and one tuple can't be splitted into more th
 
 TOAST - it's a separate table with sliced column values from the original table.
 
+### problems
+
+TOAST adds performance penalty for TEXT, JSONB data structures.
+
+It means, it is _bad idea_ to use data from json (jsonb) fields directly in OLTP mode.
+
+[something to read "Борьба с  TOAST или будущее JSONB в PostgreSQL"](https://habr.com/ru/company/oleg-bunin/blog/646987/)
+
 # VACUUM
 
 VACUUM reclaims storage occupied by dead tuples.
@@ -62,6 +72,15 @@ WAL - Write Ahead Log
 This is a fast storage for changes (in cached pages in RAM) which will be saved to disk before the transaction is approved.
 
 The main idea - we can avoid data loss with pages which are cached in memory and still not saved to disk.
+
+# Data file
+
+Table data (and some other) in PostgreSQL are splitted in 8 kB pages and stored in format:
+
+![PostgreSQL data file format](/images/pg_data_file_format.png){: .image-process-big-article-image}
+
+- When we need to read one tuple or one value, we must read whole page.
+- When we need to read value for one single column, we must read all data from all columns.
 
 
 <br />

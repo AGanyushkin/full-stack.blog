@@ -44,6 +44,13 @@ CREATE TABLE IF NOT EXISTS plant_property_name (
 
 So simple example but it can illustrate this simple but powerful idea with inheritance in PostgreSQL.
 
+# Problems
+
+Inheritance can't add forigen keys from parent to child.
+
+As result in our example we will hava table without forigen keys for language_id field and primary key for id field.
+
+
 <br />
 # Conclusion
 
