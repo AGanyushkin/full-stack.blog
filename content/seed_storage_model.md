@@ -64,27 +64,28 @@ Some examples:
 ```SQL
 CREATE TABLE IF NOT EXISTS language (
     id              SMALLSERIAL PRIMARY KEY,
-    name            VARCHAR(13),
-    tag             VARCHAR(3)
+    name            VARCHAR(13) NOT NULL UNIQUE CHECK ( char_length(name) > 1 ),
+    tag             VARCHAR(3) NOT NULL UNIQUE CHECK ( char_length(tag) > 1 )
 );
 
 CREATE TABLE IF NOT EXISTS plant (
     id              SERIAL PRIMARY KEY,
-    global_id       UUID NOT NULL
+    global_id       UUID NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS plant_name (
-    id              SERIAL PRIMARY KEY,
     language_id     SMALLINT NOT NULL REFERENCES language(id),
-    text            VARCHAR(255),
-    plant_id        INTEGER NOT NULL REFERENCES plant(id)
+    text            VARCHAR(255) NOT NULL,
+    plant_id        INTEGER NOT NULL REFERENCES plant(id),
+    PRIMARY KEY (language_id, plant_id)
 );
 
 CREATE TABLE IF NOT EXISTS plant_name_alias (
-    id              SERIAL PRIMARY KEY,
+    id              BIGSERIAL PRIMARY KEY,
     language_id     SMALLINT NOT NULL REFERENCES language(id),
-    text            VARCHAR(255),
-    plant_id        INTEGER NOT NULL REFERENCES plant(id)
+    text            VARCHAR(255) NOT NULL,
+    plant_id        INTEGER NOT NULL REFERENCES plant(id),
+    UNIQUE (language_id, text)
 );
 ```
 
