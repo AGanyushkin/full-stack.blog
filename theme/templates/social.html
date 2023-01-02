@@ -90,6 +90,13 @@
     <img style="width: 34px;" src="/theme/images/habr.jpg"></img>
   </a>
   {% endif %}
+
+  {% if name == 'docker' %}
+  <a title="{{ username }} on dickerhub" href="https://hub.docker.com/u/{{ username }}">
+    <img style="width: 30px;" src="/theme/images/docker.jpg"></img>
+  </a>
+  {% endif %}
+
 {% endfor %}
 
 {% if FEED_ALL_ATOM %}

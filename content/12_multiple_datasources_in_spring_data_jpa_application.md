@@ -1,9 +1,11 @@
 Title: Multiple datasources in Spring Data JPA application
-Date: 2022-08-01 00:01
-Category: overview
-Tags: MySQL, PostgreSQL, Spring Boot, Spring Data JPA
+Date: 2022-03-19 21:00
+Category: Spring
+Tags: mysql, postgresql, spring boot, spring data jpa
 Author: Andrey G
 Status: published
+Summary: Multiple datasources in Spring Data JPA application
+Lang: en
 ---
 
 ![the goal for this article](images/multiple_databases-Page-3.drawio.png){: .image-process-article-image}
@@ -215,7 +217,7 @@ There is some tests which we can try in file here `src/test/resources/content.re
 ```text
 http://localhost:8080/api/v1/content/plant/824f1857-c36c-4340-9f67-ad4c0ea87757/image
 
-HTTP/1.1 200 
+HTTP/1.1 200
 Content-Type: application/json;charset=utf-8
 Transfer-Encoding: chunked
 Date: Mon, 01 Aug 2022 13:15:18 GMT

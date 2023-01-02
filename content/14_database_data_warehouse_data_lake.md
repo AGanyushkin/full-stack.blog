@@ -1,9 +1,11 @@
 Title: Database & Data Warehouse & Data Lake
-Date: 2022-08-05 00:01
-Category: data_pipeline
-Tags: Data lake, Data Warehouse, Database
+Date: 2022-04-02 21:00
+Category: data engineering
+Tags: data lake, data warehouse, database
 Author: Andrey G
 Status: published
+Summary: defference between Database and Data Warehouse and Data Lake
+Lang: en
 ---
 
 I would like to have short summary here about these terms:

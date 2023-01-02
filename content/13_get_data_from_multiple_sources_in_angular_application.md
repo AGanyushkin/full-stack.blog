@@ -1,9 +1,11 @@
 Title: Get data from multiple sources in Angular application
-Date: 2022-09-05 00:01
-Category: overview
-Tags: Angular
+Date: 2022-03-26 21:00
+Category: Angular
+Tags: angular
 Author: Andrey G
 Status: published
+Summary: RxJS aggregation in Angular
+Lang: en
 ---
 
 ![multiple sources in Angular application](images/demo-angular-multisource.png){: .image-process-article-image}

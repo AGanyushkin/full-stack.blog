@@ -1,9 +1,11 @@
 Title: Remove file from git repository
-Date: 2022-07-20 00:01
-Category: note
+Date: 2022-02-19 21:00
+Category: tools
 Tags: git
 Author: Andrey G
 Status: published
+Summary: git remove files from repository entirely
+Lang: en
 ---
 
 Sometimes we need to remove file from git repository, completely remove from repository. For example it can be property file with passwords 🙂

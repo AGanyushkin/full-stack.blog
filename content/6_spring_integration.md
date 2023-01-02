@@ -1,9 +1,11 @@
 Title: Spring Integration
-Date: 2022-09-05 00:03
-Category: data_pipeline
-Tags: Spring Boot, Spring Integration
+Date: 2022-02-05 21:00
+Category: Spring
+Tags: spring boot, spring integration
 Author: Andrey G
 Status: published
+Summary: Spring Integration framework, concepts, basic overview
+Lang: en
 ---
 
 ![enterprise patterns](images/EIP_all_Vorschaubild.png){: .image-process-article-image}

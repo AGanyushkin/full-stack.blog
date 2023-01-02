@@ -1,9 +1,11 @@
 Title: Several service implementations in Angular
-Date: 2022-09-05 00:02
-Category: overview
-Tags: Angular
+Date: 2022-03-05 21:00
+Category: Angular
+Tags: angular, service
 Author: Andrey G
 Status: published
+Summary: Several service implementations in Angular
+Lang: en
 ---
 
 ![the goal for this article](images/uml_interface_implementation-1.png){: .image-process-article-image}
@@ -53,7 +55,7 @@ export class CustomerService implements AccountService {
 @Injectable()
 export class AdminService implements AccountService {
     constructor() { }
-    
+
     getListOfAccounts(): Observable<AdminAccount[]> {
     return ...
 }

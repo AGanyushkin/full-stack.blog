@@ -1,9 +1,11 @@
 Title: CV labelling tools
-Date: 2022-09-01 00:01
-Category: machine_learning
+Date: 2022-01-15 21:00
+Category: Layout Analizer
 Tags: computer vision, dataset, object detection, segmentation
 Author: Andrey G
 Status: published
+Summary: computer vision labelling tools
+Lang: en
 ---
 
 It’s a quick note about tools which I’m using for creation datasets.

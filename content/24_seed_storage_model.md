@@ -1,9 +1,11 @@
 Title: SEED storage model
-Date: 2022-10-07 00:01
-Category: SEED
-Tags: PostgreSQL
+Date: 2022-06-11 21:00
+Category: SEED Project
+Tags: postgresql, logical schema, physical schema
 Author: Andrey G
 Status: published
+Summary: PostgreSQL storage model. concept, logical schema, physical schema
+Lang: en
 ---
 
 In this post I'm going to describe database schema which I will use in my pet project  "SEED".

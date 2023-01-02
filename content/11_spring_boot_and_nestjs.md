@@ -1,9 +1,11 @@
 Title: Spring Boot and NestJS
-Date: 2022-09-04 00:01
-Category: machine_learning
-Tags: NestJS, Spring Boot, Spring MVC
+Date: 2022-03-12 21:00
+Category: Spring
+Tags: nestjs, spring, spring boot, spring mvc
 Author: Andrey G
 Status: published
+Summary: Spring Boot and NestJS comparision
+Lang: en
 ---
 
 For me it is interesting to compare Spring Boot and NestJS because they has similar core ideas based on Inversion of Control and Dependency Injection. Of course Spring Boot significantly more powerful, I understand it. Both frameworks provide ability for us to write short and expressive code. And it will be interesting to compare two implementations for one project.

@@ -1,9 +1,11 @@
 Title: Spring Batch as tool for ETL
-Date: 2022-08-18 00:01
-Category: data_pipeline
-Tags: ETL, Spring Batch, Spring Boot
+Date: 2022-02-26 21:00
+Category: Spring
+Tags: etl, spring batch, spring boot
 Author: Andrey G
 Status: published
+Summary: How we can use Spring Batch to process data and use all local resources
+Lang: en
 ---
 
 Spring Batch to do batch processing. Let’s process something in batches.

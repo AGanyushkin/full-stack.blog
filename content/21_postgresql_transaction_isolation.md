@@ -1,9 +1,11 @@
 Title: PostgreSQL indexes
-Date: 2022-08-25 00:01
-Category: overview
-Tags: PostgreSQL
+Date: 2022-05-21 21:00
+Category: PostgreSQL
+Tags: postgresql, indexes
 Author: Andrey G
 Status: published
+Summary: indexes in PostgreSQL database
+Lang: en
 ---
 
 [docs](https://www.postgresql.org/docs/current/indexes-types.html)

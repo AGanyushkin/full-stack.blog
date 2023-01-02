@@ -1,9 +1,11 @@
 Title: Angular configuration through DI Provider
-Date: 2022-09-04 00:01
-Category: overview
-Tags: Angular
+Date: 2022-02-12 21:00
+Category: Angular
+Tags: angular, di provider
 Author: Andrey G
 Status: published
+Summary: DI Provider in Angular
+Lang: en
 ---
 
 In Angular framework we can specify “something” which called token and it is possible to use this thing in DI Provider. This ability can be used to configure some shared code with different parameters.

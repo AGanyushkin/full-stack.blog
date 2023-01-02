@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block head %}
 <meta name="keywords" content="{{ article.tags|join(', ')  }}">
+<meta name="description" content="{{ article.summary  }}" />
 {% endblock %}
 
 {% block title %}&ndash; {{ article.title }}{% endblock %}

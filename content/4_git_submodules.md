@@ -1,9 +1,11 @@
 Title: GIT Submodules
-Date: 2022-09-01 00:01
-Category: overview
-Tags: git
+Date: 2022-01-22 21:00
+Category: tools
+Tags: git, submodules
 Author: Andrey G
 Status: published
+Summary: GIT Submodules
+Lang: en
 ---
 
 Git submodules is not simple approach to use to store your code. But this technic is pretty useful then you need to make changes in your project and in shared libraries, or if you would like to use shared libraries or other piece of code directly from your code without builded shared artefacts, libraries etc…
@@ -121,7 +123,7 @@ git pull --recurse-submodules
 # How to check changes in submodules?
 
 ```shell
-# To show short summary 
+# To show short summary
 git config status.submodulesummary 1
 
 # or
@@ -137,7 +139,7 @@ this command will check if there is no local (which still not pushed changes) in
 ```shell
 git push --recurse-submodules=check
 
-# to push all changes, first submodules and after that parent repository you can use 
+# to push all changes, first submodules and after that parent repository you can use
 git push --recurse-submodules=on-demand
 ```
 

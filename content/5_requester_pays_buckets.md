@@ -1,9 +1,11 @@
 Title: Requester Pays Buckets
-Date: 2022-08-13 00:01
-Category: note
-Tags: AWS, S3
+Date: 2022-01-29 21:00
+Category: data engineering
+Tags: aws, s3, payment
 Author: Andrey G
 Status: published
+Summary: aws s3 requester pays buckets
+Lang: en
 ---
 
 

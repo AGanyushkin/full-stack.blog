@@ -1,9 +1,11 @@
 Title: plant-name-parser-service
-Date: 2022-08-11 00:01
-Category: open-source
-Tags: ANTLR, Spring Boot, Spring Boot Actuator, Spring MVC, Serverless, Yandex Cloud
+Date: 2022-04-23 21:00
+Category: SEED Project
+Tags: antlr, spring boot, spring boot actuator, spring mvc, serverless, yandex cloud
 Author: Andrey G
 Status: published
+Summary: Service to parse plant names
+Lang: en
 ---
 
 This is a rest application which accepts text and parse this text as plant name. Result will be returned as json structure with plant name parts.

@@ -20,14 +20,15 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = ()
-# LINKS = (('GitHub', 'https://github.com/AGanyushkin'),
-# )
+LINKS = (
+    ('Plant Name Parser Service', '/plant-name-parser-service.html'),
+)
 
 # Social widget
 SOCIAL = (('github', 'AGanyushkin'),
           ('linkedin', 'andrey-ganyushkin-7bb99a89'),
-          ('habr', 'SleepwalkerOne'),)
+          ('habr', 'SleepwalkerOne'),
+          ('docker', 'aganyushkin'),)
 
 DEFAULT_PAGINATION = 13
 
@@ -63,7 +64,7 @@ IMAGE_PROCESS = {
 }
 
 MENUITEMS = (
-    ('Tags', '/tags.html'),
+
 )
 
 SEO_REPORT = True  # SEO report is enabled by default

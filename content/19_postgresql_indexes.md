@@ -1,9 +1,11 @@
 Title: PostgreSQL transaction isolation
-Date: 2022-08-22 00:01
-Category: overview
-Tags: PostgreSQL
+Date: 2022-05-07 21:00
+Category: PostgreSQL
+Tags: postgresql, transaction isolation level
 Author: Andrey G
 Status: published
+Summary: transaction isolation in PostgreSQL database
+Lang: en
 ---
 
 [PostgreSQL basics](/inside-postgresql.html)

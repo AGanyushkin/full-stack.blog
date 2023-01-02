@@ -1,9 +1,11 @@
 Title: Use latex to generate layout dataset
-Date: 2022-07-17 00:01
-Category: paper
-Tags: latex
+Date: 2022-01-08 21:00
+Category: Layout Analizer
+Tags: latex, article layout, ml, dataset
 Author: Andrey G
 Status: published
+Summary: latex article sources to generate layout dataset
+Lang: en
 ---
 
 “Extracting Scientific Figures with Distantly Supervised Neural Networks”

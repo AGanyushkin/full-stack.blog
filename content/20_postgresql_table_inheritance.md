@@ -1,9 +1,11 @@
 Title: PostgreSQL table inheritance
-Date: 2022-08-27 00:01
-Category: overview
-Tags: PostgreSQL
+Date: 2022-05-14 21:00
+Category: PostgreSQL
+Tags: postgresql, table inheritance
 Author: Andrey G
 Status: published
+Summary: table inheritance in PostgreSQL database
+Lang: en
 ---
 
 [docs](https://www.postgresql.org/docs/current/ddl-inherit.html)

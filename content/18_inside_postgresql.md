@@ -1,9 +1,11 @@
 Title: Inside PostgreSQL
-Date: 2022-08-21 00:01
-Category: overview
-Tags: PostgreSQL
+Date: 2022-04-30 21:00
+Category: PostgreSQL
+Tags: postgresql, mvcc, wal, toast, vacuum
 Author: Andrey G
 Status: published
+Summary: PostgreSQL insternals, inside PostgreSQL database
+Lang: en
 ---
 
 Here, I would like to describe basic concepts or elements that exist in PostgreSQL and are its main parts.

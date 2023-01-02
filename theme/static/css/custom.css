@@ -5,6 +5,7 @@
 #tags {
     margin-top: 15px;
     padding-top: 0px;
+    margin-bottom: 30px;
 }
 
 .footer {
@@ -13,4 +14,30 @@
 
 #home h2 {
     color: #181818;
+}
+
+#cats {
+    margin-top: 15px;
+    margin-bottom: 50px;
+    font-size: 13px;
+    padding-top: 15px ;
+    border-top: dotted #ddd;
+    border-width: 1px 0;
+}
+
+#cats ul li {
+    list-style: none;
+}
+
+.article_meta {
+    background-color: #eeeeee;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-top: 25px;
+    border-top: 1px solid grey;
+}
+
+.article_meta h3 {
+    color: gray;
 }
