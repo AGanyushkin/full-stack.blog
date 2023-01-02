@@ -6,6 +6,7 @@
     {% for article in articles %}
     <li>
       <span>{{ article.date|strftime('%d %B %Y') }} &raquo;</span>
+      <img src="/theme/images/{{article.lang}}-full.png" alt="english language" style="height:15px;display:inline;" /> 
       <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
     </li>
     {% endfor %}
