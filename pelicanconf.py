@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 13
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'papers']
+STATIC_PATHS = ['images', 'papers', 'personal']
 DISPLAY_PAGES_ON_MENU = True
 
 DEFAULT_METADATA = {
