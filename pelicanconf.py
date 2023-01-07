@@ -1,8 +1,8 @@
 AUTHOR = 'Andrey'
 AUTHOR_FULL = 'Andrey Ganyushkin'
 SITENAME = 'Full Stack Blog'
-SITEURL = 'https://full-stack.blog'
-# SITEURL = 'http://127.0.0.1:8000'
+# SITEURL = 'https://full-stack.blog'
+SITEURL = 'http://127.0.0.1:8000'
 
 TAGLINE = 'I am a software engineer with more than 10 years of experience. I am interested in both the architecture of the application and the development process itself, with full-stack and cloud approaches.'
 
@@ -35,7 +35,7 @@ DEFAULT_PAGINATION = 13
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-STATIC_PATHS = ['images', 'papers', 'personal']
+STATIC_PATHS = ['images', 'papers', 'personal', 'books']
 DISPLAY_PAGES_ON_MENU = True
 
 DEFAULT_METADATA = {
@@ -43,7 +43,6 @@ DEFAULT_METADATA = {
 }
 
 USER_LOGO_URL = '/theme/images/progg_small.jpeg'
-# USER_FAVICON_URL = '/favicon.png'
 
 # https://github.com/pelican-plugins/image-process
 IMAGE_PROCESS = {
