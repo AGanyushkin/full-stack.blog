@@ -8,7 +8,7 @@ Summary: design patterns for microservices architecture
 Lang: ru
 ---
 
+Здесь хочу простой и понятный список паттернов которые стоит рассматривать при проектировании чего-нибудь на микросервисах.
 
-
-# Вывод
+[то что стоит читать вместо этого блога](https://microservices.io/patterns/)
 
