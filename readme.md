@@ -1,4 +1,10 @@
 
+# Local
+
+```bash
+make devserver
+```
+
 # Build and deploy
 
 ```shell
@@ -11,6 +17,18 @@ aws.exe s3 cp --recursive ./output/ s3://full-stack.blog/ --endpoint-url=https:/
 
 ```
 
+# Docker
+
+```shell
+# build image
+docker build -t pelican:v1 .
+
+# use image
+docker run --rm -v G:/full-stack.blog:/data -p 9999:9999 -it pelican:v1 /bin/bash
+
+docker run --rm -v G:/full-stack.blog:/data -p 9999:9999 -it pelican:v1 make devserver
+docker run --rm -v G:/full-stack.blog:/data -it pelican:v1 make clean html
+```
 
 # Some additional links
 

@@ -1,8 +1,11 @@
+PORT = 9999
+BIND = '0.0.0.0'
+
 AUTHOR = 'Andrey'
 AUTHOR_FULL = 'Andrey Ganyushkin'
 SITENAME = 'Full Stack Blog'
 SITEURL = 'https://full-stack.blog'
-# SITEURL = 'http://127.0.0.1:8000'
+# SITEURL = 'http://127.0.0.1:9999'
 
 TAGLINE = 'I am a software engineer with more than 10 years of experience. I am interested in both the architecture of the application and the development process itself, with full-stack and cloud approaches.'
 
