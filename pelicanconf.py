@@ -1,11 +1,15 @@
-PORT = 9999
-BIND = '0.0.0.0'
+import os
+
+DEF_PORT = 9999
+PORT = os.environ.get('PORT', DEF_PORT)
+DEF_BIND = '0.0.0.0'
+BIND = os.environ.get('BIND', DEF_BIND)
 
 AUTHOR = 'Andrey'
 AUTHOR_FULL = 'Andrey Ganyushkin'
 SITENAME = 'Full Stack Blog'
-SITEURL = 'https://full-stack.blog'
-# SITEURL = 'http://127.0.0.1:9999'
+DEF_SITEURL = 'https://full-stack.blog'
+SITEURL = os.environ.get('SITEURL', DEF_SITEURL)
 
 TAGLINE = 'I am a software engineer with more than 10 years of experience. I am interested in both the architecture of the application and the development process itself, with full-stack and cloud approaches.'
 
