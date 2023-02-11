@@ -2,6 +2,9 @@
 {% block title %}&ndash; Category: {{ category }}{% endblock %}
 
 {% block head %}
+<meta name="keywords" content="full-stack, blog">
+<meta name="description" content="category" />
+
 {% if CATEGORY_FEED_ATOM %}
 <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ category }} Category Atom" />
 {% endif %}
