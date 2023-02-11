@@ -743,7 +743,10 @@ font-weight: 600;
 }
 
 .content {
-font: 400 16px/22px "open sans", sans-serif;
+/*font: 400 16px/22px "open sans", sans-serif;*/
+    font-weight: 400;
+    font-family: Roboto Mono,monospace;
+    
 border-left: 1px solid #DDD;
 padding-left: 40px;
 padding-top: 25px;
