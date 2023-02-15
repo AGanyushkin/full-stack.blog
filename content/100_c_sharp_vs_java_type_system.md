@@ -8,6 +8,8 @@ Summary: languages, java, jvm, C#, c sharp, .net, dotnet
 Lang: ru
 ---
 
+[TOC]
+
 Я думая что изучение C# стоит начать со знакомства с его системой типов и сраынить её с Java ;)
 
 

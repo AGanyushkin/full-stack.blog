@@ -8,6 +8,8 @@ Summary: languages, C#, c sharp, .net, dotnet, algorithms
 Lang: en
 ---
 
+[TOC]
+
 I would like to write some algorithms to train with new knowleges in C#.
 
 All sources, tests, etc...

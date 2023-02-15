@@ -8,6 +8,8 @@ Summary: PostgreSQL insternals, inside PostgreSQL database
 Lang: en
 ---
 
+[TOC]
+
 Here, I would like to describe basic concepts or elements that exist in PostgreSQL and are its main parts.
 
 [Book to read: PostgreSQL 14 изнутри, Егор Рогов](https://edu.postgrespro.ru/postgresql_internals-14.pdf)

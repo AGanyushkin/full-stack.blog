@@ -8,6 +8,8 @@ Summary: PostgreSQL storage model. concept, logical schema, physical schema
 Lang: en
 ---
 
+[TOC]
+
 In this post I'm going to describe database schema which I will use in my pet project  "SEED".
 
 [GitHub, all sources are available here](https://github.com/AGanyushkin/seed-storage)

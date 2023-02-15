@@ -8,6 +8,8 @@ Summary: How we can use Spring Batch to process data and use all local resources
 Lang: en
 ---
 
+[TOC]
+
 Spring Batch to do batch processing. Let’s process something in batches.
 
 All code you can find here: [https://github.com/AGanyushkin/demo-springbatch](https://github.com/AGanyushkin/demo-springbatch)

@@ -8,6 +8,8 @@ Summary: Simple REST binary storage service
 Lang: en
 ---
 
+[TOC]
+
 Simple REST binary storage service. Easy to deploy, easy to configure, easy to use.
 
 ## Source

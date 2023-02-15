@@ -8,6 +8,7 @@ Summary: event-driven architecture, design patterns
 Lang: ru
 ---
 
+[TOC]
 
 
 # Conclusion

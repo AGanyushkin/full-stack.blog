@@ -8,6 +8,7 @@ Summary: aws s3 requester pays buckets
 Lang: en
 ---
 
+[TOC]
 
 Interesting concept in AWS. You can share your data in AWS S3 but not pay for storing this data. In AWS it’s called “Requester Pays Buckets”.
 

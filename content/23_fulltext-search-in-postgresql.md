@@ -8,6 +8,8 @@ Summary: Full-text search in PostgreSQL
 Lang: en
 ---
 
+[TOC]
+
 It is short note how we can use full-text search in PostgreSQL.
 
 More details, as usual, in [documentation](https://www.postgresql.org/docs/current/textsearch.html) ;)

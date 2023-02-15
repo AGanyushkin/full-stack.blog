@@ -8,6 +8,8 @@ Summary: Foreign-data wrapper in PostgreSQL
 Lang: en
 ---
 
+[TOC]
+
 The goal for this post:
 
 1. Quick overview for foreign-data wrapper in PostgreSQL

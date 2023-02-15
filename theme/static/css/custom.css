@@ -46,3 +46,17 @@
     border-radius: 5px;
     box-shadow: 2px 1px 5px lightgrey;
 }
+
+div.toc {
+    padding: 13px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+div.toc span.toctitle {
+    text-transform: uppercase;
+    font-weight: 500;
+}

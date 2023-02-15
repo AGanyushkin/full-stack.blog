@@ -8,6 +8,8 @@ Summary: defference between Database and Data Warehouse and Data Lake
 Lang: en
 ---
 
+[TOC]
+
 I would like to have short summary here about these terms:
 
 - Database – System which keep data to stack business tasks

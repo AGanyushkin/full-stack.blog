@@ -8,6 +8,8 @@ Summary: domain driven design или предметно-ориентирован
 Lang: ru
 ---
 
+[TOC]
+
 ![Domain-Driven Design](/images/20190111151118821.png){: .image-process-big-article-image}
 
 

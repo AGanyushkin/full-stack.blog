@@ -8,6 +8,8 @@ Summary: Spring Integration framework, concepts, basic overview
 Lang: en
 ---
 
+[TOC]
+
 ![enterprise patterns](images/EIP_all_Vorschaubild.png){: .image-process-article-image}
 
 It is simple overview of Spring Integration component from Spring framework and it is impossible to cover all features in one article.

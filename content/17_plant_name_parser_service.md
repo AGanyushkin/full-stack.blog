@@ -8,6 +8,8 @@ Summary: Service to parse plant names
 Lang: en
 ---
 
+[TOC]
+
 This is a rest application which accepts text and parse this text as plant name. Result will be returned as json structure with plant name parts.
 
 ## Source

@@ -8,6 +8,8 @@ Summary: transaction isolation in PostgreSQL database
 Lang: en
 ---
 
+[TOC]
+
 [PostgreSQL basics](/inside-postgresql.html)
 
 [Book to read: PostgreSQL 14 изнутри, Егор Рогов](https://edu.postgrespro.ru/postgresql_internals-14.pdf)

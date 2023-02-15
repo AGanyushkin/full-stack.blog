@@ -8,6 +8,8 @@ Summary: git remove files from repository entirely
 Lang: en
 ---
 
+[TOC]
+
 Sometimes we need to remove file from git repository, completely remove from repository. For example it can be property file with passwords 🙂
 
 # just remove

@@ -8,6 +8,8 @@ Summary: table inheritance in PostgreSQL database
 Lang: en
 ---
 
+[TOC]
+
 [docs](https://www.postgresql.org/docs/current/ddl-inherit.html)
 
 # Table inheritance

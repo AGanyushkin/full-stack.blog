@@ -8,6 +8,8 @@ Summary: RxJS aggregation in Angular
 Lang: en
 ---
 
+[TOC]
+
 ![multiple sources in Angular application](images/demo-angular-multisource.png){: .image-process-article-image}
 
 # What I want to do?

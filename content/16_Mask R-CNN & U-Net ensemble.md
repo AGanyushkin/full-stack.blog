@@ -8,6 +8,8 @@ Summary: Mask R-CNN & U-Net ensemble
 Lang: en
 ---
 
+[TOC]
+
 Maybe not right this solution, but just only interesting idea to use this approach to increase quality of segmentation.
 
 [paper link](./papers/MASK-RCNN-AND-U-NET-ENSEMBLED-FOR-NUCLEI-SEGMENTATION__1901.10170.pdf)

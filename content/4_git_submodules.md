@@ -8,6 +8,8 @@ Summary: GIT Submodules
 Lang: en
 ---
 
+[TOC]
+
 Git submodules is not simple approach to use to store your code. But this technic is pretty useful then you need to make changes in your project and in shared libraries, or if you would like to use shared libraries or other piece of code directly from your code without builded shared artefacts, libraries etc…
 
 # What is this the git submodule?

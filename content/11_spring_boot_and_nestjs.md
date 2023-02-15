@@ -8,6 +8,8 @@ Summary: Spring Boot and NestJS comparision
 Lang: en
 ---
 
+[TOC]
+
 For me it is interesting to compare Spring Boot and NestJS because they has similar core ideas based on Inversion of Control and Dependency Injection. Of course Spring Boot significantly more powerful, I understand it. Both frameworks provide ability for us to write short and expressive code. And it will be interesting to compare two implementations for one project.
 
 NestJS development experience pretty similar to Angular experience and if we can use NestJS for simple backend services instead of Spring Boot – it means we can reduce complexity in development process for full stack developers.

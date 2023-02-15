@@ -8,6 +8,8 @@ Summary: indexes in PostgreSQL database
 Lang: en
 ---
 
+[TOC]
+
 [docs](https://www.postgresql.org/docs/current/indexes-types.html)
 
 # Hash

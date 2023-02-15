@@ -8,6 +8,8 @@ Summary: DI Provider in Angular
 Lang: en
 ---
 
+[TOC]
+
 In Angular framework we can specify “something” which called token and it is possible to use this thing in DI Provider. This ability can be used to configure some shared code with different parameters.
 
 sample implementation: [https://github.com/AGanyushkin/demo-angular-token-injection](https://github.com/AGanyushkin/demo-angular-token-injection)
