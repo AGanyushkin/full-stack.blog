@@ -30,12 +30,12 @@
 }
 
 .article_meta {
-    background-color: #eeeeee;
+    background-color: aliceblue;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
     padding-top: 25px;
-    border-top: 1px solid grey;
+    border-top: 3px solid #3267aa;
 }
 
 .article_meta h3 {
@@ -44,7 +44,6 @@
 
 .highlight pre {
     border-radius: 5px;
-    box-shadow: 2px 1px 5px lightgrey;
 }
 
 div.toc {

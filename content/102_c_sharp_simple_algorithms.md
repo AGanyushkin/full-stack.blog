@@ -1,4 +1,4 @@
-Title: Simple algorithms in C#
+Title: Simple algorithms with C#
 Date: 2023-02-14 21:00
 Category: languages
 Tags: java, C#, algorithms
