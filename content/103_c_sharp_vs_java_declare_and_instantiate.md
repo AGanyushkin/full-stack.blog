@@ -3,7 +3,7 @@ Date: 2023-02-18 21:00
 Category: languages
 Tags: java, C#
 Author: Andrey G
-Status: draft
+Status: published
 Summary: languages, java, jvm, C#, c sharp, .net, dotnet
 Lang: en
 ---
